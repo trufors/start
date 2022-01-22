@@ -22,4 +22,14 @@ $(function(){
 			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
 		},
 	});
-});
+})
+const menuBtn = document.querySelector(".menu__btn")
+const menuList = document.querySelector(".menu__list")
+
+menuBtn.addEventListener("click", () => {
+  if (menuList.classList.contains("menu__list--active")) {
+    menuList.classList.remove("menu__list--active")
+  } else {
+    menuList.classList.add("menu__list--active")
+  }
+})
